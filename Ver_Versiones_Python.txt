@@ -2,26 +2,53 @@
 Abre tu terminal (PowerShell o CMD) y escribe el siguiente comando:
 
 PowerShell
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 py --list
+
 Lo que verás:
 Este comando listará todas las versiones de Python instaladas en tu sistema que el "Launcher" de Windows detecta. El resultado se verá similar a esto (donde el asterisco * indica la versión que está por defecto):
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Plaintext
  -V:3.12 *        (Python 3.12)
  -V:3.10          (Python 3.10)
 También puedes verificar cuál es la versión que responde por defecto al comando principal escribiendo:
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 PowerShell
 python --version
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 2. Cómo elegir qué versión usar
-En Windows, tienes dos formas principales de elegir qué versión de Python ejecutar:
 
-Opción A: Ejecutar un script rápido con una versión específica
-Si solo quieres correr un archivo (archivo.py) usando una versión particular sin cambiar ninguna configuración, usas el comando py seguido de la versión:
+Presiona Windows + R
+Escribe:
 
-PowerShell
-py -3.12 archivo.py
-o
+sysdm.cpl
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ve a Opciones avanzadas → Variables de entorno.
+En Variables de usuario para angel, busca Path.
+Pulsa Editar.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ahí probablemente encontrarás entradas parecidas a:
 
-PowerShell
-py -3.10 archivo.py
+C:\Users\angel\AppData\Local\Programs\Python\Python312\
+C:\Users\angel\AppData\Local\Programs\Python\Python312\Scripts\
+C:\Users\angel\AppData\Local\Programs\Python\Python313\
+C:\Users\angel\AppData\Local\Programs\Python\Python313\Scripts\
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Pon Python 3.13 arriba de Python 3.12
+
+Deja primero:
+
+C:\Users\angel\AppData\Local\Programs\Python\Python313\
+C:\Users\angel\AppData\Local\Programs\Python\Python313\Scripts\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+y debajo:
+
+C:\Users\angel\AppData\Local\Programs\Python\Python312\
+C:\Users\angel\AppData\Local\Programs\Python\Python312\Scripts\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No necesitas desinstalar 3.12.
+
+Luego cierra completamente CMD y abre uno nuevo y ejecuta
