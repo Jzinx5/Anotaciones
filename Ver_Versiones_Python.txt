@@ -1,0 +1,27 @@
+1. Ver qué versiones de Python tienes instaladas
+Abre tu terminal (PowerShell o CMD) y escribe el siguiente comando:
+
+PowerShell
+py --list
+Lo que verás:
+Este comando listará todas las versiones de Python instaladas en tu sistema que el "Launcher" de Windows detecta. El resultado se verá similar a esto (donde el asterisco * indica la versión que está por defecto):
+
+Plaintext
+ -V:3.12 *        (Python 3.12)
+ -V:3.10          (Python 3.10)
+También puedes verificar cuál es la versión que responde por defecto al comando principal escribiendo:
+
+PowerShell
+python --version
+2. Cómo elegir qué versión usar
+En Windows, tienes dos formas principales de elegir qué versión de Python ejecutar:
+
+Opción A: Ejecutar un script rápido con una versión específica
+Si solo quieres correr un archivo (archivo.py) usando una versión particular sin cambiar ninguna configuración, usas el comando py seguido de la versión:
+
+PowerShell
+py -3.12 archivo.py
+o
+
+PowerShell
+py -3.10 archivo.py
